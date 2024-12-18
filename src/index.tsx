@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { SearchCompanies } from './api';
+// import { SearchCompanies } from './api';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-console.log(SearchCompanies("tsla"));
+// console.log(SearchCompanies("tsla"));
 
 root.render(
   <React.StrictMode>

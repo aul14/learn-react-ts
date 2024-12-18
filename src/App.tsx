@@ -7,8 +7,8 @@ import { SearchCompanies } from './api';
 
 function App() {
   const [search, setsearch] = useState("");
-  const [searchResult, setSearchResult] = useState<CompanySearch[]>([]);
-  const [serverError, setServerError] = useState<string>("");
+  const [searchResult, setSearchResult] = useState<CompanySearch[]>();
+  const [serverError, setServerError] = useState<string | null>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
       setsearch(e.target.value);
@@ -17,6 +17,7 @@ function App() {
 
   const onClick = async (e: SyntheticEvent) => {
       const result = await SearchCompanies(search);
+
       if (typeof result == "string") {
         setServerError(result);
       } else if (Array.isArray(result.data)) {
@@ -28,6 +29,7 @@ function App() {
   return (
     <div className="App">
       <Search onClick={onClick} search={search} handleChange={handleChange}/>
+      {serverError && <h1>Unable to connect to API</h1>}
       <CardList />
     </div>
   );
