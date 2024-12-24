@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { SlGraph } from "react-icons/sl";
 import {
   FaHome,
   FaMoneyBill,
@@ -47,6 +48,13 @@ const Sidebar = (props: Props) => {
             >
               <FaMoneyBill />
               <h6 className="ml-3">Cashflow Statement</h6>
+            </Link>
+            <Link
+              to="historical-dividend"
+              className="flex md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+            >
+              <SlGraph />
+              <h6 className="ml-3">Historical Dividend</h6>
             </Link>
           </div>
         </div>
