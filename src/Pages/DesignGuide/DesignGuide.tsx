@@ -19,7 +19,7 @@ const DesignGuide = (props: Props) => {
     <>
       <h1>Finshark Design Guide</h1>
       <RatioList data={testIncomeStatementData} config={tableConfig} />
-      <Table />
+      <Table data={testIncomeStatementData} config={tableConfig} />
       <h3>
         This is Finshark's design guide. This is where we well house various
         design aspects of the app

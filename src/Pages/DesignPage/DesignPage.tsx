@@ -11,7 +11,7 @@ const DesignPage = (props: Props) => {
         This is Finshark's design page. This is where we well house various
         design aspects of the app
       </h2>
-      <Table />
+      {/* <Table /> */}
     </>
   );
 };
