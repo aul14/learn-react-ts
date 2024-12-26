@@ -27,7 +27,7 @@ export const handleError = (error: any) => {
       toast.warning(err.data);
     } else if (err?.status === 401) {
       // Penanganan untuk status 401
-      toast.warning(`Please login`);
+      toast.warning(`Unauthorized`);
       window.history.pushState({}, "LoginPage", "/login");
     } else if (err) {
       // Fallback jika error tidak dikenali
